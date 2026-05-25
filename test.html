@@ -444,7 +444,7 @@
             document.getElementById('submitBtn').disabled = true;
             document.getElementById('showExplanationBtn').disabled = false;
             document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
-            document.getElementById('nextBtn').disabled = currentQuestionIndex === questions.length - 1;
+            document.getElementById('nextBtn').disabled = false;
 
             alert(isCorrect ? '✅ 正解です！' : '❌ 不正解です');
         });
@@ -515,16 +515,7 @@
             const section = testData[currentSection];
             const maxIndex = section.questions.length - 1;
             
-            if (currentQuestionIndex < maxIndex) {
-                currentQuestionIndex++;
-                displayQuestion();
-            } else if (currentQuestionIndex === maxIndex) {
-                // 最後の問題の場合は結果画面へ
-                testEndTime = new Date();
-                showResults();
-            }
-        });
-
+           
         // ========== 結果表示 ==========
         function showResults() {
             switchScreen('resultScreen');
