@@ -701,7 +701,19 @@
                 displayHomeScreen();
             });
         }
-
+ // ========== ホームボタン ==========
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            switchScreen('homeScreen');
+            displayHomeScreen();
+        });
+ 
+        document.getElementById('retryBtn').addEventListener('click', function() {
+            const sections = [...new Set(Object.keys(userAnswers).map(key => key.split('_')[0]))];
+            if (sections.length > 0) {
+                startTestForSection(sections[0]);
+            }
+        });
+        
         // ========== 詳細解答表示 ==========
         function displayDetailedAnswers() {
             const detailDiv = document.getElementById('detailAnswers');
