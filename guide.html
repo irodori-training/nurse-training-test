@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いろどり訪問看護新人教育テスト - スタッフ向けガイド</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 5px;
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        
+        .step-box {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #667eea;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 3px 8px rgba(102, 126, 234, 0.4);
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            margin-left: 30px;
+            font-size: 1.15em;
+        }
+        
+        .screen-box {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .screen-label {
+            background: #667eea;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 1.8em;
+            color: #667eea;
+            margin: 10px 0;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box::before {
+            content: "💡 ヒント: ";
+            font-weight: bold;
+            color: #856404;
+        }
+        
+        .warning-box {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box::before {
+            content: "⚠️ 注意: ";
+            font-weight: bold;
+            color: #c62828;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box::before {
+            content: "ℹ️ ポイント: ";
+            font-weight: bold;
+            color: #1565c0;
+        }
+        
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .success-box::before {
+            content: "✅ ";
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        
+        .qa-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .qa-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .qa-question {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .qa-question::before {
+            content: "❓ ";
+        }
+        
+        .qa-answer {
+            color: #555;
+            padding-left: 20px;
+        }
+        
+        .qa-answer::before {
+            content: "→ ";
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .checklist {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .checklist-item {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #667eea;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        
+        .url-box {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: monospace;
+            word-break: break-all;
+            text-align: center;
+            margin: 20px 0;
+            border: 2px dashed #667eea;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .password-box {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            border: 2px solid #ff9800;
+        }
+        
+        .password-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .password-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e65100;
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-item strong {
+            color: #667eea;
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.5em; }
+            h2 { font-size: 1.2em; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 いろどり訪問看護新人教育テスト</h1>
+        <p class="subtitle">スタッフ向け操作説明書 v2.0</p>
+        
+        <!-- はじめに -->
+        <h2>📌 はじめに</h2>
+        <p>このテストは、訪問看護の基本知識を確認するためのものです。<br>
+        すべてのスタッフが共通のパスワードでログインし、自分の職種に応じたセクションを受験します。</p>
+        
+        <div class="info-box">
+            このテストの目的は、皆さんの知識を「評価」することではなく、<br>
+            「自分の理解度を確認」して「学習に活かす」ことです。<br>
+            リラックスして取り組んでください。
+        </div>
+        
+        <h3>📝 テストの内容</h3>
+        <p><strong>全員が受験するセクション：</strong></p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>セクション1：</strong><br>訪問看護の基礎知識
+            </div>
+            <div class="feature-item">
+                <strong>セクション2：</strong><br>保険制度、記録
+            </div>
+        </div>
+        
+        <p><strong>職種に応じて受験するセクション：</strong></p>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>看護師向：</strong><br>セクション3：訪問看護の基本知識
+            </div>
+            <div class="feature-item">
+                <strong>セラピスト向：</strong><br>セクション4：訪問リハビリの基本知識
+            </div>
+        </div>
+        
+        <h3>⏱️ 所要時間</h3>
+        <p>約 30 ～ 45 分（自分のペースで OK。時間制限はありません。）</p>
+        
+        <h3>✅ 合格基準</h3>
+        <p><strong>90%（9/10問正解）</strong><br>
+        各セクションで 90% 以上の正解率で「合格」です。<br>
+        すべてのセクションに合格すると「修了証」が発行されます。</p>
+        
+        <!-- アクセス情報 -->
+        <h2>🔗 アクセス情報</h2>
+        
+        <h3>テストサイトの URL</h3>
+        <div class="url-box">
+            https://yminamino-lang.github.io/nurse-training-test/
+        </div>
+        
+        <h3>ログインパスワード</h3>
+        <div class="password-box">
+            <div class="password-label">全スタッフ共通のパスワード</div>
+            <div class="password-value">irodori2026</div>
+        </div>
+        
+        <div class="warning-box">
+            パスワードは社外秘です。<br>
+            irodori-houmonkango.com のスタッフ以外には共有しないでください。
+        </div>
+        
+        <!-- 操作手順 -->
+        <h2>🚀 操作手順</h2>
+        
+        <div class="step-box">
+            <div class="step-number">1</div>
+            <div class="step-title">テストサイトを開く</div>
+            <p>ブラウザ（Chrome、Safari、Edge など）で以下の URL を開きます。</p>
+            <div class="url-box" style="margin: 15px 0;">
+                https://yminamino-lang.github.io/nurse-training-test/
+            </div>
+            <div class="screen-box">
+                <span class="screen-label">ログイン画面</span>
+                <p style="margin-top: 10px;"><strong>いろどり訪問看護新人教育テスト</strong></p>
+                <p style="color: #999; margin: 10px 0;">irodori 訪問看護スタッフ用</p>
+                <p style="margin: 15px 0; padding: 10px; background: #f5f5f5; border-radius: 5px;">
+                    🔒 パスワード欄<br>
+                    👤 名前欄<br>
+                    🏢 所属欄<br>
+                    👔 職種選択（看護師 / セラピスト）
+                </p>
+            </div>
+            <div class="tip-box">
+                スマートフォンでも PC でも、どちらでも受験できます！
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">2</div>
+            <div class="step-title">ログイン情報を入力</div>
+            <p>以下の情報を入力します：</p>
+            <ul style="margin: 15px 0 15px 20px; line-height: 2;">
+                <li><strong>パスワード：</strong> irodori2026（全員共通）</li>
+                <li><strong>名前：</strong> 山田太郎（本名・フルネーム）</li>
+                <li><strong>所属：</strong> 厚木店（店舗名）</li>
+                <li><strong>職種：</strong> 看護師 または セラピスト（リハビリ）</li>
+            </ul>
+            <div class="info-box">
+                職種選択が重要です。看護師を選ぶとセクション3、<br>
+                セラピストを選ぶとセクション4 を受験できます。
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">3</div>
+            <div class="step-title">「テスト開始」をクリック</div>
+            <p>「テスト開始」ボタンをクリックするとホーム画面に移動します。</p>
+            <div class="screen-box">
+                <span class="screen-label">ホーム画面</span>
+                <p style="margin: 10px 0; padding: 10px; background: #f0f7ff; border-radius: 5px;">
+                    👤 ログイン情報表示<br>
+                    📊 進捗状況（どのセクションが合格か）<br>
+                    🎯 セクション選択ボタン
+                </p>
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">4</div>
+            <div class="step-title">受験するセクションを選択</div>
+            <p>ホーム画面で「セクション1」から受験を開始します。<br>
+            セクションは自由な順番で受験できます。</p>
+            <div class="info-box">
+                セクション1、2 は「必須」（全員受験）<br>
+                セクション3 または 4 は「職種に応じて受験」
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">5</div>
+            <div class="step-title">問題に回答する</div>
+            <p>問題文を読み、選択肢 A ～ D から正しいと思うものを選びます。</p>
+            <div class="screen-box">
+                <span class="screen-label">テスト画面</span>
+                <p style="margin: 10px 0;">問題3: 訪問看護の利用者負担はどれですか？<br>
+                難易度: 中</p>
+                <div style="background: #f5f5f5; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                    ○ A: 全額自己負担<br>
+                    ● B: 健康保険の自己負担分（1～3割）← 選択中<br>
+                    ○ C: 完全に無料<br>
+                    ○ D: 利用者負担なし
+                </div>
+                <p style="margin-top: 10px; color: #667eea; font-weight: bold;">← 前へ　　回答する　　次へ →　　解説を見る</p>
+            </div>
+            <div class="info-box">
+                <strong>操作方法：</strong><br>
+                1. 選択肢をクリック（タップ）<br>
+                2. 「回答する」ボタンをクリック<br>
+                3. 正解か不正解か確認できます
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">6</div>
+            <div class="step-title">結果を確認</div>
+            <p>「回答する」をクリックすると、正解か不正解かが表示されます。</p>
+            <div class="screen-box">
+                <span class="screen-label">回答後の画面</span>
+                <p style="margin: 10px 0;">
+                    ✅ 正解：選択肢が緑色で表示<br>
+                    ❌ 不正解：回答が赤色、正解が緑色で表示
+                </p>
+            </div>
+            <div class="success-box">
+                必ず「解説を見る」で詳しい説明を読みましょう。<br>
+                正解した問題でも、解説で知識が深まります！
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">7</div>
+            <div class="step-title">「次へ →」で進み続ける</div>
+            <p>解説を読んだら「次へ →」ボタンで次の問題に進みます。<br>
+            10 問すべて回答したら自動的に結果画面に移動します。</p>
+            <div class="tip-box">
+                最後の問題で「次へ →」をクリックすると、<br>
+                自動的に結果画面に進みます。
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">8</div>
+            <div class="step-title">テスト結果を確認</div>
+            <p>スコアとセクション別の結果が表示されます。</p>
+            <div class="screen-box">
+                <span class="screen-label">結果画面</span>
+                <p style="margin: 10px 0; text-align: center;">
+                    <strong style="font-size: 2em; color: #667eea;">85%</strong><br>
+                    <small>スコア</small>
+                </p>
+                <p style="margin: 10px 0;">
+                    正解数: 34 / 40<br>
+                    🎉 優秀です！
+                </p>
+            </div>
+            <div class="info-box">
+                <strong>セクション別結果</strong><br>
+                ✅ セクション1：90% 【合格】<br>
+                ❌ セクション2：60% 【未合格】<br>
+                ✅ セクション3：80% 【合格】
+            </div>
+        </div>
+        
+        <div class="arrow">⬇️</div>
+        
+        <div class="step-box">
+            <div class="step-number">9</div>
+            <div class="step-title">未合格セクションを再受験</div>
+            <p>90% に達していないセクションがあれば、「ホームに戻る」をクリックしてホーム画面に戻ります。<br>
+            未合格のセクションは「【再受験】」と表示されるので、もう一度受験します。</p>
+            <div class="warning-box">
+                すべてのセクションで 90% 以上を達成すると、<br>
+                「修了証」が自動的に発行されます！
+            </div>
+        </div>
+        
+        <!-- 便利な機能 -->
+        <h2>✨ 便利な機能</h2>
+        
+        <h3>📊 前回の結果を見る</h3>
+        <p>ホーム画面の「📊 前回の結果を見る」ボタンで、過去 5 回の成績を確認できます。</p>
+        <div class="success-box">
+            自分の成長を見える化できます！<br>
+            苦手な分野が見えてきたら、復習しましょう。
+        </div>
+        
+        <h3>🔓 ログアウト</h3>
+        <p>テスト終了後、ホーム画面の「ログアウト」ボタンでセッションを終了します。</p>
+        <div class="warning-box">
+            共有 PC で受験する場合は、<br>
+            必ずログアウトしてください！<br>
+            （ログアウト時に個人データは削除されます）
+        </div>
+        
+        <h3>⏹️ 途中で終了したい場合</h3>
+        <p>テスト画面の右上の「終了」ボタンをクリックすると、テストを中断できます。<br>
+        回答済みの問題のみで採点されます。</p>
+        <div class="info-box">
+            後日、同じセクションを再度受験することで、<br>
+            前回の続きではなく最初からやり直しになります。
+        </div>
+        
+        <!-- よくある質問 -->
+        <h2>❓ よくある質問</h2>
+        
+        <div class="qa-section">
+            <div class="qa-item">
+                <div class="qa-question">スマートフォンでも受験できますか？</div>
+                <div class="qa-answer">はい、できます。スマートフォン、タブレット、PC のどれでも受験可能です。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">途中でやめても大丈夫ですか？</div>
+                <div class="qa-answer">はい。「終了」ボタンで中断できます。回答済みの問題のみで採点されます。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">同じテストを何回も受けられますか？</div>
+                <div class="qa-answer">はい、何度でも受験できます。合格するまで何度もチャレンジしましょう。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">パスワードが通りません。</div>
+                <div class="qa-answer">「irodori2026」と入力してください。大文字小文字に注意。スペースが入っていないか確認してください。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">画面が真っ白になります。</div>
+                <div class="qa-answer">ブラウザのキャッシュをクリアしてから再度アクセスしてみてください。（Cmd+Shift+Delete または Ctrl+Shift+Delete）</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">解説が読みづらいです。</div>
+                <div class="qa-answer">スマートフォンの場合、画面を横向きにすると見やすくなります。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">結果は管理者に届いていますか？</div>
+                <div class="qa-answer">テスト終了時に自動的に管理者に報告されます。心配な場合は、管理者に確認してください。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">テストに合格点はありますか？</div>
+                <div class="qa-answer">合格・不合格はありません。各セクションで 90% 以上で「合格」です。スコアを見て、苦手な分野を復習しましょう。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">セクション3 と 4 の両方は受験しなくていいですか？</div>
+                <div class="qa-answer">いいえ。看護師はセクション3、セラピストはセクション4 のみ受験します。職種に応じたセクションだけで大丈夫です。</div>
+            </div>
+            
+            <div class="qa-item">
+                <div class="qa-question">修了証はどうやってもらいますか？</div>
+                <div class="qa-answer">すべてのセクションで 90% 以上を達成すると、自動的に修了証が画面に表示されます。ダウンロードして保存できます。</div>
+            </div>
+        </div>
+        
+        <!-- チェックリスト -->
+        <h2>📋 受験前チェックリスト</h2>
+        
+        <div class="checklist">
+            <p style="font-weight: bold; margin-bottom: 15px;">テストを始める前に確認しましょう：</p>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>静かな場所にいる</p>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>インターネット接続が安定している</p>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>30 ～ 45 分の時間が確保できる</p>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>テストの URL を確認した</p>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>パスワードを確認した</p>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>名前と所属を確認した</p>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <p>職種（看護師 / セラピスト）を確認した</p>
+            </div>
+        </div>
+        
+        <!-- 受験のコツ -->
+        <h2>💡 受験のコツ</h2>
+        
+        <div class="step-box">
+            <h3 style="margin-top: 0;">1. リラックスして取り組む</h3>
+            <p>合格・不合格ではなく、自分の理解度を確認するためのテストです。焦らず、じっくり問題を読みましょう。</p>
+        </div>
+        
+        <div class="step-box">
+            <h3 style="margin-top: 0;">2. 問題文をよく読む</h3>
+            <p>選択肢を読む前に、まず問題文を 2 回読みましょう。「正しいもの」「誤っているもの」のどちらを問うているか確認してください。</p>
+        </div>
+        
+        <div class="step-box">
+            <h3 style="margin-top: 0;">3. すべての選択肢を検討する</h3>
+            <p>1 つの選択肢が正解に見えても、他の選択肢も全部読んでから選びましょう。</p>
+        </div>
+        
+        <div class="step-box">
+            <h3 style="margin-top: 0;">4. 解説を必ず読む</h3>
+            <p>正解した問題でも、解説を読むことで知識が深まります。特に「詳細」の部分を読みましょう。</p>
+        </div>
+        
+        <div class="step-box">
+            <h3 style="margin-top: 0;">5. 苦手な分野は何回も受験</h3>
+            <p>テストは何度でも受験できます。苦手な分野は、復習してから何度もチャレンジしましょう。</p>
+        </div>
+        
+        <!-- お問い合わせ -->
+        <div class="contact-box">
+            <h3>📞 困ったときは</h3>
+            <p>パスワードがわからない、ログインできない、テストが動かないなど、</p>
+            <p>トラブルがありましたら、管理者までご連絡ください。</p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>いろどり訪問看護</strong></p>
+            <p>新人教育テスト 操作説明書 v2.0</p>
+            <p>2026 年 5 月作成（最新版）</p>
+        </div>
+    </div>
+</body>
+</html>
